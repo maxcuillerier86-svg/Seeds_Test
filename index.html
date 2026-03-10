@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seed Navigator | Point St-Charles Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Community prototype</p>
+        <h1>Seed Navigator</h1>
+        <p>
+          Discover what it takes to grow a seed from the Point St-Charles library collection.
+          Pick a known seed or type your own, then get a simple growing plan with timelines,
+          effort level, and reminder prompts.
+        </p>
+      </div>
+      <aside class="callout">
+        <h2>Library resources</h2>
+        <ul>
+          <li>Tool lending (rakes, shovels, brooms, small-space kits)</li>
+          <li>Grow-light and indoor starter support</li>
+          <li>Community seed exchange and local gardening guidance</li>
+        </ul>
+      </aside>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Plan your grow</h2>
+        <form id="planner-form">
+          <label for="knownSeed">Pick from known available seeds</label>
+          <select id="knownSeed" name="knownSeed">
+            <option value="">-- Select from library list --</option>
+            <option value="souci">Souci (Marigold mix)</option>
+            <option value="roquette">Roquette japonaise wasabi</option>
+          </select>
+
+          <label for="customSeed">Or type a seed name</label>
+          <input id="customSeed" name="customSeed" type="text" placeholder="e.g., tomatoes, kale, basil" />
+
+          <label for="plantingDate">Planting date</label>
+          <input id="plantingDate" name="plantingDate" type="date" required />
+
+          <label for="space">Growing space</label>
+          <select id="space" name="space">
+            <option value="balcony">Balcony / small patio</option>
+            <option value="windowsill">Indoor windowsill</option>
+            <option value="yard">Backyard / ground bed</option>
+            <option value="community">Community garden plot</option>
+          </select>
+
+          <button type="submit">Generate my plan</button>
+        </form>
+      </section>
+
+      <section id="results" class="card hidden" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <p>
+        Built to lower barriers to growing food and connect people with local library resources.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
