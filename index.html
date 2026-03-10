@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seed Library Grow Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="badge">Point St Charles Seed + Tool Library</p>
+      <h1>Grow with confidence, one seed at a time.</h1>
+      <p>
+        Pick a known seed from the library list or type your own. Get practical
+        guidance for equipment, space, effort, growth timeline, and care needs.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Find your seed</h2>
+        <form id="seed-form" class="seed-form">
+          <label>
+            Choose a known seed
+            <select id="known-seed">
+              <option value="">-- Select from available envelopes --</option>
+            </select>
+          </label>
+
+          <label>
+            Or type any seed you have
+            <input
+              id="seed-input"
+              name="seed"
+              placeholder="e.g., tomato, basil, wasabi arugula"
+              autocomplete="off"
+            />
+          </label>
+
+          <label>
+            Desired planting date
+            <input id="planting-date" type="date" />
+          </label>
+
+          <button type="submit">Generate Grow Plan</button>
+        </form>
+
+        <section class="library-resources">
+          <h3>Local library resources</h3>
+          <ul>
+            <li>Tool lending (rakes, brooms, spades, and hand tools)</li>
+            <li>Grow lights and small-space starter kits</li>
+            <li>Seed envelope borrowing / exchange</li>
+            <li>Phone or in-person reservations</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="panel output" id="output">
+        <h2>Your personalized grow guide</h2>
+        <p class="placeholder">
+          Enter a seed and planting date to see your grow plan and reminders.
+        </p>
+      </section>
+    </main>
+
+    <template id="guide-template">
+      <article class="guide">
+        <h3 class="seed-name"></h3>
+        <p class="description"></p>
+        <div class="grid">
+          <div>
+            <h4>Equipment</h4>
+            <ul class="equipment"></ul>
+          </div>
+          <div>
+            <h4>Space</h4>
+            <p class="space"></p>
+          </div>
+          <div>
+            <h4>Effort level</h4>
+            <p class="effort"></p>
+          </div>
+          <div>
+            <h4>Water & light</h4>
+            <p class="care"></p>
+          </div>
+          <div>
+            <h4>Growth timeline</h4>
+            <p class="timeline"></p>
+          </div>
+        </div>
+        <div>
+          <h4>Reminders</h4>
+          <ol class="reminders"></ol>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
